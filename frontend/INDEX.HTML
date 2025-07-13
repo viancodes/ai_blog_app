@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI BLOG GENERATOR</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-100 font-sans antialiased">
+
+  <!-- Navbar -->
+  <nav class="bg-blue-600 p-4 text-white flex justify-between items-center shadow">
+    <h1 class="text-3xl font-bold">AI Blog Generator</h1>
+    <a href="#" class="text-white hover:underline text-lg">Logout</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="flex-grow container mx-auto mt-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md transition-transform transform hover:scale-105">
+
+      <!-- Header -->
+      <div class="text-center mb-8">
+        <h2 class="text-2xl font-semibold mb-3">Welcome to AI Blog Generator</h2>
+        <p class="text-gray-700 leading-relaxed">
+          Generate high-quality blog articles from YouTube videos using artificial intelligence.
+          Simply enter the link to the YouTube video below and let the AI create the content for you!
+        </p>
+      </div>
+
+      <!-- Input Section -->
+      <div class="mb-10">
+        <h2 class="text-xl mb-3 font-semibold">Enter YouTube Link</h2>
+        <div class="flex shadow rounded-md overflow-hidden">
+          <input
+            id="youtubeLink"
+            type="url"
+            placeholder="Paste YouTube Link..."
+            class="flex-grow p-3 border-t border-b border-l border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <button
+            id="generateBlogButton"
+            class="bg-blue-600 text-white px-6 py-2 hover:bg-blue-700 transition-colors"
+          >
+            Generate
+          </button>
+        </div>
+      </div>
+
+      <!-- Output Section -->
+      <section class="flex-grow">
+        <h2 class="text-xl font-semibold mb-4">Generated Blog Article</h2>
+        <div
+          id="blogContent"
+          class="bg-gray-50 p-4 rounded-md border border-gray-200 text-gray-800 space-y-4"
+        >
+          <!-- Blog content will appear here -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center p-6 text-gray-600 mt-12">
+    Powered by <a href="https://github.com/viancodes" class="text-blue-600 hover:underline">ViaN Codes</a>
+  </footer>
+
+</body>
+</html>
