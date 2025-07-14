@@ -5,6 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI BLOG GENERATOR</title>
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+            @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to { 
+                transform: rotate(360deg);
+            }
+        }
+         
+        
+         @-webkit-keyframes rotate {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to { 
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        
+        .load {
+            width: 100px;
+            height: 100px;
+            margin: 110px auto 0;
+            border:solid 10px #8822aa;
+            border-radius: 50%;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+             -webkit-transition: all 0.5s ease-in;
+            -webkit-animation-name:             rotate; 
+            -webkit-animation-duration:         1.0s; 
+            -webkit-animation-iteration-count:  infinite;
+            -webkit-animation-timing-function: linear;
+                
+                 transition: all 0.5s ease-in;
+            animation-name:             rotate; 
+            animation-duration:         1.0s; 
+            animation-iteration-count:  infinite;
+            animation-timing-function: linear; 
+        }
+
+  </style>
 </head>
 <body class="flex flex-col min-h-screen bg-gray-100 font-sans antialiased">
 
@@ -46,8 +89,11 @@
         </div>
       </div>
 
+      <!-- Section for loading circle -->
+       <div style="display: none;" id="loading-circle" class="load"></div>
+
       <!-- Output Section -->
-      <section class="flex-grow">
+      <section class="mt-10 flex-grow">
         <h2 class="text-xl font-semibold mb-4">Generated Blog Article</h2>
         <div
           id="blogContent"
@@ -60,10 +106,19 @@
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="text-center p-6 text-gray-600 mt-12">
-    Powered by <a href="https://github.com/viancodes" class="text-blue-600 hover:underline">ViaN Codes</a>
-  </footer>
+<!-- Footer -->
+<footer class="text-center p-6 text-gray-600 mt-12">
+  Powered by
+  <a
+    href="https://github.com/viancodes"
+    class="text-blue-600 hover:underline"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    ViaN Codes
+  </a>
+</footer>
+
 
 </body>
 </html>
